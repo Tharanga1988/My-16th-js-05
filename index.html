@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Account Dashboard</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main class="account-card">
+    <header class="account-card__header">
+      <h1 class="account-card__title">Bank Dashboard</h1>
+      <p class="account-card__holder" id="holderName">Loading...</p>
+    </header>
+
+    <section class="account-card__balance-box">
+      <span class="account-card__label">Current Balance</span>
+      <h2 class="account-card__balance" id="balanceDisplay">$0.00</h2>
+    </section>
+
+    <!-- Error Message Alert -->
+    <div class="account-card__error account-card__error--hidden" id="errorMessage"></div>
+
+    <!-- Actions Section -->
+    <section class="account-card__actions">
+      <div class="account-card__form-group">
+        <input type="number" id="amountInput" class="account-card__input" placeholder="Enter amount..." min="1">
+      </div>
+
+      <div class="account-card__btn-group">
+        <button type="button" class="btn btn--deposit" id="depositBtn">Deposit</button>
+        <button type="button" class="btn btn--withdraw" id="withdrawBtn">Withdraw</button>
+      </div>
+
+      <button type="button" class="btn btn--exit" id="exitBtn">Exit Account</button>
+    </section>
+
+    <!-- Status Message -->
+    <div class="account-card__status" id="statusMessage"></div>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
